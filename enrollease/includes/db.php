@@ -2,10 +2,10 @@
 // includes/db.php
 // MySQL connection using PDO
 
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'enrollease');
-define('DB_USER', 'root');
-define('DB_PASS', '');        // ← blank by default in XAMPP, add password if you set one
+define('DB_HOST', 'sql12.freesqldatabase.com');
+define('DB_NAME', 'sql12823256');
+define('DB_USER', 'sql12823256');
+define('DB_PASS', 'wvwQNxliFM');        // ← blank by default in XAMPP, add password if you set one
 
 function getDB() {
     static $pdo = null;
