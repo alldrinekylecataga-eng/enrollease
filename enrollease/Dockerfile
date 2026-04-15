@@ -1,13 +1,10 @@
 FROM php:8.2-apache
 
-RUN docker-php-ext-install pdo pdo_mysql
-
+# Enable Apache rewrite (important for PHP apps)
 RUN a2enmod rewrite
 
+# Copy your project into Apache folder
 COPY . /var/www/html/
 
+# Fix permissions
 RUN chown -R www-data:www-data /var/www/html
-
-EXPOSE 80
-
-CMD ["apache2-foreground"]
